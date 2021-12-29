@@ -16,3 +16,17 @@ print("wishing you %s %s" % (message3 ,message1))
 
 print(a+ message1)
 print(b,message1)
+
+print(f"{message2} Pawan Mann {message1} \n{'*'*50}")
+
+x=1.34
+y=4.65
+z=x*y
+print(f"the value is {x*y}")
+print(f"the value is {x*y:.2f}")
+mod=y%x
+print(mod)
+
+print(x==y) # Always a boolean value
+print(x<=y)
+

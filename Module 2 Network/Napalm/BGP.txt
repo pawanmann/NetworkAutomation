@@ -1,0 +1,2 @@
+router bgp 65000
+neighbor 192.168.1.92 remote-as 65000
