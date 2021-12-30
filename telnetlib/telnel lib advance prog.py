@@ -1,7 +1,7 @@
 import datetime
 import telnetlib,os
 import time,shutil
-import wave
+
 
 Now=datetime.datetime.now()
 Date=f"{Now.day}-{Now.month}-{Now.year}-{Now.hour}-{Now.minute}-{Now.second}"
