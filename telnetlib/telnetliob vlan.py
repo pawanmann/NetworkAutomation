@@ -31,23 +31,29 @@ print(f"this code will save configuration of {HOST}")
 
 
 tn.write(b"conf t\n")
-tn.write(b"vlan 10\n")
-tn.write(b"name admin\n")
-tn.write(b"vlan 20\n")
-tn.write(b"name sales\n")
-tn.write(b"vlan 30\n")
-tn.write(b"name IT\n")
+
+
+# tn.write(b"vlan 10\n")
+# tn.write(b"name admin\n")
+# tn.write(b"vlan 20\n")
+# tn.write(b"name sales\n")
+# tn.write(b"vlan 30\n")
+# tn.write(b"name IT\n")
+
+
+for i in range (2,30):
+    tn.write(b"vlan %s\n"%str(i).encode())
+    tn.write(b"name Python_%s\n"%str(i).encode())
 tn.write(b"end\n")
 tn.write(b"wr me\n")
 tn.write(b"sh vl brief\n")
 tn.write(b"exit\n")
 
-# print(tn.read_all().decode())
-
-Result=tn.read_all().decode()
+print(tn.read_all().decode())
+#Result = tn.read_all().decode()
 
 # with open(f"Config\Switch %s.txt"%HOST,'w') as Output:
 #     Output.write(Result)
-print(Result[0:5])
-print(Result)
+# print(Result[0:5])
+# print(Result)
 print(" completed task!!!!!!!")
