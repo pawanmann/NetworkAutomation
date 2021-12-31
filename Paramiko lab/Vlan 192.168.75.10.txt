@@ -1,0 +1,50 @@
+
+SW1#config t
+Enter configuration commands, one per line.  End with CNTL/Z.
+SW1(config)#vlan 100
+SW1(config-vlan)#name Accounts
+SW1(config-vlan)#vlan 200
+SW1(config-vlan)#name Sales
+SW1(config-vlan)#end
+SW1#terminal len 0
+SW1#sh vlan brief
+
+VLAN Name                             Status    Ports
+---- -------------------------------- --------- -------------------------------
+1    default                          active    Et0/0, Et0/1, Et0/2
+2    Python_2                         active    
+3    Python_3                         active    
+4    Python_4                         active    
+5    Python_5                         active    
+6    Python_6                         active    
+7    Python_7                         active    
+8    Python_8                         active    
+9    Python_9                         active    
+10   Python_10                        active    
+11   Python_11                        active    
+12   Python_12                        active    
+13   Python_13                        active    
+14   Python_14                        active    
+15   Python_15                        active    
+16   Python_16                        active    
+17   Python_17                        active    
+18   Python_18                        active    
+19   Python_19                        active    
+20   Python_20                        active    
+21   Python_21                        active    
+22   Python_22                        active    
+23   Python_23                        active    
+24   Python_24                        active    
+25   Python_25                        active    
+26   Python_26                        active    
+27   Python_27                        active    
+28   Python_28                        active    
+29   Python_29                        active    
+30   IT                               active    
+100  Accounts                         active    
+200  Sales                            active    
+1002 fddi-default                     act/unsup 
+1003 token-ring-default               act/unsup 
+1004 fddinet-default                  act/unsup 
+1005 trnet-default                    act/unsup 
+SW1#
