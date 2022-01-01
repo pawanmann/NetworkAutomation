@@ -1,17 +1,24 @@
 import Advance as run
-import os,Advance1
+import os
 
 SW1={'IP':'192.168.75.10','Port':22,'User':os.environ.get('DB_USER'),'Password':os.environ.get('DB_PWD')}
 Conn=run.connect(**SW1)
 shell=run.get_ssh(Conn)
+Path=input("Enter path of the file: ")
+
+with open(Path+".txt") as W:
+    for line in W:
+        line=line.strip()
+        run.send_command(shell,line)
+
 # run.send_command(shell,'config t')
 # run.send_command(shell,'vlan 100')
 # run.send_command(shell,'name Accounts')
 # run.send_command(shell,'vlan 200')
 # run.send_command(shell,'name Sales')
 # run.send_command(shell,'end')
-run.send_command(shell,'terminal len 0')
-run.send_command(shell,'sh run')
+# run.send_command(shell,'terminal len 0')
+# run.send_command(shell,'sh run')
 
 Catch=run.output(shell)
 
