@@ -1,0 +1,3 @@
+access-list 100 permit icmp any any
+access-list 100 permit tcp any any eq domain
+access-list 100 permit udp any any
